@@ -1,16 +1,54 @@
 {
-  "name": "g100days",
+  "name": "react-apollo-typeScript",
   "version": "0.1.0",
-  "private": true,
+  "keywords": [
+    "react",
+    "apollo",
+    "graphql",
+    "typescript",
+    "boilerplate"
+  ],
+  "author": {
+    "name": "Nithin Peter",
+    "email": "nithinpeter7@gmail.com"
+  },
+  "license": "MIT",
   "dependencies": {
+    "apollo-cache-inmemory": "^1.1.5",
+    "apollo-client": "^2.2.0",
+    "apollo-link-http": "^1.3.2",
+    "graphql": "^0.12.3",
+    "graphql-tag": "^2.6.1",
     "react": "^16.2.0",
-    "react-dom": "^16.2.0",
-    "react-scripts": "1.0.17"
+    "react-apollo": "^2.0.4",
+    "react-dom": "^16.2.0"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "start": "poi",
+    "build": "poi build",
+    "test": "jest"
+  },
+  "devDependencies": {
+    "@types/graphql": "^0.11.8",
+    "@types/jest": "^22.0.1",
+    "@types/react": "^16.0.34",
+    "@types/react-dom": "^16.0.3",
+    "jest": "^22.0.6",
+    "poi": "^9.6.12",
+    "poi-preset-typescript": "^9.0.2",
+    "ts-jest": "^22.0.1",
+    "typescript": "^2.6.2"
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.tsx?$": "ts-jest"
+    },
+    "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
+    "moduleFileExtensions": ["ts", "tsx", "js", "jsx", "json", "node"],
+    "moduleNameMapper": {
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$":
+        "<rootDir>/test_setup/mocks/file_mock.js",
+      "\\.(css|less)$": "<rootDir>/test_setup/mocks/style_mock.js"
+    }
   }
 }
